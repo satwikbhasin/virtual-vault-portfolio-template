@@ -1,0 +1,262 @@
+/* Container Styles */
+.about-page-container {
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-section {
+  display: flex;
+  width: 90vw;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.top-section-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.top-section-heading {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.top-section-subtext {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.top-section-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.top-section-subtext,
+.top-section-buttons,
+.image-gallery,
+.features-section {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.top-section-subtext.visible,
+.top-section-buttons.visible,
+.image-gallery.visible,
+.features-section.visible {
+  opacity: 1;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.primary-button {
+  background-color: var(--ternary-bg);
+  color: var(--ternary-color);
+}
+
+.primary-button:hover {
+  background-color: var(--about-page-primary-button-hover);
+}
+
+.secondary-button {
+  background-color: transparent;
+  font-weight: 600;
+  color: #000;
+}
+
+.secondary-button:hover {
+  background-color: var(--about-page-secondary-button-hover);
+}
+
+.top-section-image {
+  flex: 1;
+  text-align: right;
+}
+.top-section-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Gallery Layout */
+.image-gallery {
+  display: flex;
+  gap: 10px;
+  height: 50vh;
+  width: 50%;
+  overflow: hidden;
+  position: sticky;
+  border-radius: 10px;
+  opacity: 0;
+}
+.image-first {
+  flex: 2;
+  width: 20vw;
+}
+.image-first img {
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+  height: -webkit-fill-available;
+}
+.image-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.image-second {
+  flex: 2;
+  height: 30%;
+}
+.image-second img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-third {
+  flex: 1;
+  height: 20vh;
+}
+.image-third img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Features Section */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: space-around;
+  padding: 60px 40px;
+  margin-top: 2vh;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.feature-card {
+  flex: 1;
+  max-width: 300px;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  background: transparent;
+  backdrop-filter: blur(1px);
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+.feature-card h3,
+.feature-card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .image-gallery {
+    width: 100%;
+  }
+
+  .features-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page-container {
+    margin-top: 3vh;
+  }
+
+  .image-gallery {
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .image-right {
+    flex-direction: row;
+  }
+
+  .image-first {
+    width: 100%;
+    height: 50%;
+  }
+
+  .image-second {
+    flex: 1;
+    height: 100%;
+  }
+
+  .image-third {
+    flex: 1;
+    height: 100%;
+  }
+
+  .top-section-heading {
+    font-size: 48px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.dropdown-item {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  font-weight: 400;
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item:active {
+  color: #000000;
+}
+

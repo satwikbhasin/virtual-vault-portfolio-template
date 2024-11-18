@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: "SF UI Display", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  overflow: auto;
+  scroll-behavior: smooth;
+  transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --brand-accent: #000000;
+}
+
+[themePreference="dark"] {
+  --primary-bg: #0a0a0a;
+  --primary-color: #ffffff;
+  --secondary-bg: #414c50;
+  --secondary-color: #818181;
+  --ternary-bg: #ffffff;
+  --ternary-color: #000000;
+  --contact-card-bg: #44444411;
+  --contact-card-border: #222222;
+  --navbar-bg: #3c3c3c56;
+  --about-page-primary-button-hover: #c3c3c3;
+  --about-page-secondary-button-hover: #3d3d3d6d;
+}
+
+[themePreference="light"] {
+  --primary-bg: #ffffff;
+  --primary-color: #000000;
+  --secondary-bg: #414c50;
+  --secondary-color: #818181;
+  --ternary-bg: #000000;
+  --ternary-color: #ffffff;
+  --contact-card-bg: #e6e6e611;
+  --contact-card-border: #e6e6e6;
+  --navbar-bg: #d6d6d656;
+  --about-page-primary-button-hover: #282828;
+  --about-page-secondary-button-hover: #dfdfdf4a;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s;
+}
